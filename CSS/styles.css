@@ -13,5 +13,19 @@ img[alt="logo"]  {
     border-radius: 50%;
 }
 
+.homebg {
+     height: 100vh;
+    background-size: cover;
+    width: 100%;
+    background-repeat: no-repeat;
+    background-image: url('https://lh3.googleusercontent.com/u/0/drive-viewer/AK7aPaC0JR2Et9rkMKyQQ9XgSNeF4YDPX1SCGCxNEDe6nNEAjmGQeVHE-lRajOijzWz9b9IYUA--xNj0Ws41BqTTlHBmMpJSpQ=w600-h1304');
+}
+
+h1  {
+    font-size: 13rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
 
 
