@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;750&display=swap');
 
 *,
 *::after,
@@ -8,17 +8,21 @@ padding: 0;
 box-sizing: border-box;
 }
 
+
 img[alt="logo"]  {
-    width: 7rem;
+    width: 7rem ;
     border-radius: 50%;
 }
 
 .homebg {
-     height: 100vh;
-    background-size: cover;
-    width: 100%;
-    background-repeat: no-repeat;
-    background-image: url('https://lh3.googleusercontent.com/u/0/drive-viewer/AK7aPaC0JR2Et9rkMKyQQ9XgSNeF4YDPX1SCGCxNEDe6nNEAjmGQeVHE-lRajOijzWz9b9IYUA--xNj0Ws41BqTTlHBmMpJSpQ=w600-h1304');
+  
+    width: 100%; 
+    background-repeat: no-repeat;  
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin-top: 130px; /* Height of the navbar */
+    margin-bottom: 60px; /* Height of the footer */
 }
 
 h1  {
@@ -28,4 +32,42 @@ h1  {
     align-items: center;
 }
 
+p {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 12px;
+}
 
+h2  {
+    font-size: 8rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+/* Card styles */
+.card {
+    width: 18rem;
+    display: flex;
+    justify-content: space-around; /* Distribute items evenly with space between them */
+    align-items: flex-start; /* Align items to the start of the flex container */
+    flex-wrap: wrap; /* Allow items to wrap to the next line */
+    gap: 20px; /* Spacing between cards */
+    padding-top: 20px; /* Example padding */
+    padding-bottom: 20px; /* Example padding */
+    /* Other card styles */
+}
+
+.background {
+
+    background-repeat: no-repeat;
+}
+
+h3 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 4rem;
+}
