@@ -8,6 +8,12 @@ padding: 0;
 box-sizing: border-box;
 }
 
+.fine {
+
+    width: 2rem;
+    height: 4rem;
+    
+}
 
 img[alt="logo"]  {
     width: 7rem ;
@@ -51,13 +57,13 @@ h2  {
 .card {
     width: 18rem;
     display: flex;
-    justify-content: space-around; /* Distribute items evenly with space between them */
-    align-items: flex-start; /* Align items to the start of the flex container */
-    flex-wrap: wrap; /* Allow items to wrap to the next line */
-    gap: 20px; /* Spacing between cards */
-    padding-top: 20px; /* Example padding */
-    padding-bottom: 20px; /* Example padding */
-    /* Other card styles */
+    justify-content: space-around; 
+    align-items: flex-start; 
+    flex-wrap: wrap; 
+    gap: 20px; 
+    padding-top: 20px; 
+    padding-bottom: 20px; 
+
 }
 
 .background {
@@ -70,4 +76,92 @@ h3 {
     justify-content: center;
     align-items: center;
     font-size: 4rem;
+}
+.space {
+   
+    margin-right: 400px;
+    padding: 8px 12px;
+    border: none;
+    border-radius: 4px;
+    background-color: #f0f0f0;
+    color: #333;
+    font-size: 14px;
+}
+/* For mobile or smaller screens */
+@media screen and (max-width: 600px) {
+    .space {
+        display: block;
+        margin-bottom: 100px; /* Adjust the space between input and button for smaller screens */
+    }
+}
+
+.container {
+    display: flex;
+    justify-content: space-between; /* Elements on opposite ends */
+    align-items: center;
+}
+
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+}
+
+.container {
+    width: 80%;
+    margin: 20px auto;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+    text-align: center;
+}
+
+.contact-form {
+    max-width: 400px;
+    margin: 0 auto;
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+label {
+    display: block;
+    font-weight: bold;
+}
+
+input[type="text"],
+input[type="email"],
+textarea {
+    width: 100%;
+    padding: 8px;
+    border-radius: 5px;
+    border: 1px solid #252222;
+}
+
+textarea {
+    resize: vertical;
+}
+
+button {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    background-color: #000000;
+    color:  rgb(255, 255, 255);
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #5a5a5a;
 }
