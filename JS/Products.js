@@ -136,32 +136,43 @@ sortBtn.addEventListener("click", function () {
 });
 
 let lookForProduct = document.querySelector("[data-search-product]");
-let myProducts = document.querySelector('[data-myProducts]');
-console.log(myProducts)
+let myProducts = document.querySelector("[data-myProducts]");
+console.log(myProducts);
 
-console.log(lookForProduct)
+console.log(lookForProduct);
 
-lookForProduct.addEventListener("keyup", function(){
-    let searchedFor = products.filter( (prod) => {
-        return prod.make.toLowerCase().includes(lookForProduct.value.toLowerCase())     //just making it case sensitive
-    })
-    myProducts.innerHTML = ''
-    if( searchedFor.length == 0 && lookForProduct.value.length > 0 ){ //if it finds nothing it should return a the error message
-        myProducts.innerHTML = 'Product not found'
-    } else {
-        searchedFor.forEach( product => {
-            myProducts.innerHTML += `
+lookForProduct.addEventListener("keyup", function () {
+  let searchedFor = products.filter((prod) => {
+    return prod.make.toLowerCase().includes(lookForProduct.value.toLowerCase()); //just making it case sensitive
+  });
+  myProducts.innerHTML = "";
+  if (searchedFor.length == 0 && lookForProduct.value.length > 0) {
+    //if it finds nothing it should return a the error message
+    myProducts.innerHTML = "Product not found";
+  } else {
+    searchedFor.forEach((product) => {
+      myProducts.innerHTML += `
             <div class="card my-3 mx-3">
               <img src="${product.img}" class="card-img-top" width="300px" height="300px">
              <div class="card-body d-flex flex-column align-items-center">
               <h5 class="card-title">${product.make}</h5>
                <p class="card-text">${product.name}</p>
                   <p class="card-text">R${product.amount}</p>
-                   <a href="#" class="btn btn-dark">Add to Cart</a>
+                   <a href="#" class="btn btn-dark"  id="addToCartBtn" >Add to Cart</a>
                </div>
                 </div>
     
-            `
-        })
-    }
+            `;
+    });
+    document.querySelectorAll(".addToCartBtn").forEach((button) => {
+      button.addEventListener("click", function () {
+
+        let cartItems = JSON.parse(localStorage.getItem(" checkout")) || [];
+        let newItem = { itemName: "Your Item", price: 10 };
+        cartItems.push(newItem);
+        localStorage.setItem("checkout", JSON.stringify(cartItems));
+        let cartSize = cartItems.length;
+      });
+    });
+  }
 });
