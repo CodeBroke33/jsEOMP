@@ -10,7 +10,7 @@
     <title>Admin</title>
 </head>
 <body>
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top">
+    <nav class="navbar navbar-expand-lg navbar-dark bg-black sticky-top">
         <div class="container-fluid">
           <a class="navbar-brand" href="../index.html"><img src="https://lh3.googleusercontent.com/u/0/drive-viewer/AK7aPaD8FelrzQd8ypQDL9pZt0Vw2uPVw8uFbOHWDYeZRaPExcyBQ9TBrgb3jvsTBIxPeGw9HDdpKqUp9rOfcFN9adPLQmvy5w=w800-h1304" loading="lazy" class="img-thumbnail img-fluid" alt="logo"></a>
           <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -41,10 +41,70 @@
         </div>
       </nav>
       <main class="container-fluid">
-        
+        <div class="container">
+          <div class="row d-flex justify-content-between flex-md-row flex-column gap-2">
+            <div class="col">
+              <button class="btn bg-black ms-2 text-white" id="sorting">Sorting</button>
+            </div>
+            <div class="col">
+              <button class="btn bg-black me-2 text-white" id="addProducts" data-bs-toggle="modal" data-bs-target="#addNewProduct">
+                Add new products
+              </button>
+            </div>
+            <!-- Modal -->
+            <div class="modal fade" id="addNewProduct" tabindex="-1" aria-labelledby="addNewProductLabel"
+              aria-hidden="true">
+              <div class="modal-dialog">
+                <div class="modal-content">
+                  <div class="modal-header">
+                    <h1 class="modal-title fs-5" id="addNewProductLabel">
+                      Add a new product
+                    </h1>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                  </div>
+                  <div class="modal-body">
+                    <form class="form g-2">
+                      <div class="container">
+                        <input class="form-control" type="text" placeholder="Enter your laptop's make" name="addMake"
+                          id="addMake" required />
+                        <textarea class="form-control my-2" placeholder="Enter your laptop's specs" name="addSpec"
+                          id="addSpec" required></textarea>
+                        <input class="form-control" type="number" placeholder="Enter the amount" name="addAmount"
+                          id="addAmount" required />
+                        <input class="form-control my-2" type="url" placeholder="Enter the image's url" name="addImage"
+                          id="addImage" required />
+                      </div>
+                    </form>
+                  </div>
+                  <div class="modal-footer my-2">
+                    <button type="button" class="btn btn-black" data-bs-dismiss="modal">
+                      Close
+                    </button>
+                    <button type="button" class="btn btn-black" id="saveProduct">
+                      Save changes
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="row" data-scroll>
+            <table class="table table-responsive">
+              <thead>
+                <th scope="col">Make</th>
+                <th scope="col">Image</th>
+                <th scope="col">Spec</th>
+                <th scope="col">Amount</th>
+                <th scope="col">Action</th>
+              </thead>
+              <tbody data-admin></tbody>
+            </table>
+          </div>
+        </div> 
       </main>
-      <footer class="container-fluid text-white bg-dark fixed-bottom">
+      <footer class="container-fluid text-white bg-black fixed-bottom">
         <div class="row">
+          <p class="image"> <img src="https://lh3.googleusercontent.com/u/0/drive-viewer/AK7aPaDz6joIxWz74iHL9GP7g8IjhcjA_uVYoUQH3k1nHXPAHB1HgP0nvwobRolRqC-LDna_10O3gGWJle_nXT0mRGaEGOss=w944-h1304"></p>
           <p class="lead">SK&#8734;Infinatetely.com &copy; <span
             id="currentYear">
           </span></p>
