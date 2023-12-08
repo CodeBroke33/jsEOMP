@@ -1,4 +1,4 @@
-//Footer
+//Sthe date for my footer
 document.querySelector("#currentYear").textContent =
   new Date().getUTCFullYear();
 
@@ -78,7 +78,7 @@ function displayProducts() {
             <div class="card my-3 mx-3">
               <img src="${product.img}" class="card-img-top" width="300px" height="300px">
              <div class="card-body d-flex flex-column align-items-center">
-              <h5 class="card-title">${product.make}</h5>
+              <h6 class="card-title">${product.make}</h6>
                <p class="card-text">${product.name}</p>
                   <p class="card-text">R${product.amount}</p>
                    <a href="#" class="btn btn-dark">Add to Cart</a>
@@ -164,9 +164,11 @@ lookForProduct.addEventListener("keyup", function () {
     
             `;
     });
-    document.querySelectorAll(".addToCartBtn").forEach((button) => {
-      button.addEventListener("click", function () {
 
+    
+    document.querySelectorAll("#addToCartBtn").forEach((button) => {
+      button.addEventListener("click", function () {
+        // alert('clicked')
         let cartItems = JSON.parse(localStorage.getItem(" checkout")) || [];
         let newItem = { itemName: "Your Item", price: 10 };
         cartItems.push(newItem);
@@ -176,3 +178,13 @@ lookForProduct.addEventListener("keyup", function () {
     });
   }
 });
+
+
+let cartItems = JSON.parse(localStorage.getItem('cartItems')) || []
+
+    function newItem(item){
+      if(item){
+        cartItems.push(item)
+        localStorage.setItem('cartItem', JSON.stringify(cartItems))
+      }
+    }
