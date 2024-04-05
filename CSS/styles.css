@@ -12,7 +12,8 @@ body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-    background-color:white; 
+    /* background-color:white;  */
+    
 }
 
 .fine {
@@ -20,25 +21,18 @@ body {
     height: 4rem;
 }
 
-.awe {
-height: 100vh;
 
-}
 
 img[alt="logo"]  {
     width: 7rem ;
     border-radius: 50%;
 }
 
-.homebg {
-  
-    width: 100%; 
-    background-repeat: no-repeat;  
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    margin-top: 130px; /* Height of the navbar */
-    margin-bottom: 60px; /* Height of the footer */
+.mine {
+    background-image: url('https://i.ibb.co/rs7THB0/Screenshot-2023-12-07-123643.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
 }
 
 h1  {
@@ -165,6 +159,14 @@ textarea {
 textarea {
     resize: vertical;
 }
+
+.mine {
+    background-image: url('https://i.ibb.co/rs7THB0/Screenshot-2023-12-07-123643.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    min-height: calc(106.1vh - 3.5rem - 4rem); /* Adjust according to your header and footer height */
+  }
 
 button.cntct {
     display: block;
